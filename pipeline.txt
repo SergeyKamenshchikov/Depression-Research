@@ -1,0 +1,8 @@
+1. ages-gender-length-urls.py [links.txt] {удаление повторов текстовых паттернов,группировка по возрасту(>10),фильтраци€ по длине поста(>100),URL}=>[age-urls-gender-length.txt]
+2. gender-age-norm.py [age-urls-gender-length.txt] {нормализаци€ по возрасту, полу - получение равномерного распределени€}=>[urls-norm-age-gender.txt]
+3. contect-collect.py [urls-norm-age-gender.txt] {компресси€ сообщений => сокращение длины до L=100} => help-norm.txt [очищенные тексты дл€ обработки NLP]
+4. content-statistics.py [help-norm.txt] {статистика по леммам, получение словар€ лемм} => lemmas.txt + freq.txt
+5. matrix.py [lemmas.txt,freq.txt]=>{получение уникального словар€, составление двумерной матрицы графа}=[uniq_voc.txt+graph.csv]=>[Gephi]=>[Graph]
+6. gephi.exe [graph.csv]=> graph.png
+7. dimension.py [graph.png]=>{ѕолучение фрактальной размерности графа, betwennes centrality/degree centrality}
+8. graph.py [graph.csv]=>[распределение DC,BC]=>[xls]
